@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>{% block title %}Home{% endblock %} | Raju Jha</title>
+	<meta name="description" content="personal website of Raju Jha">  
+	<meta name="author" content="Raju Kartik Jha, Raju, Raju Jha">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'home/css/base.css' %}">
+   <link rel="stylesheet" href="{% static 'home/css/main.css' %}">
+   <link rel="stylesheet" href="{% static 'home/css/vendor.css' %}">    
+
+   <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+
+   {% block extrastyles %}{% endblock %}
+
+   <!-- script
+   ================================================== -->   
+	<script src="{% static 'home/js/modernizr.js' %}"></script>
+	<script src="{% static 'home/js/pace.min.js' %}"></script>
+
+	{% block extrascripts %}{% endblock %}
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="{% static 'home/favicon.ico' %}">
+
+</head>
+
+<body id="top">
+
+	{% block content %}
+	{% endblock %}
+
+
+   <!-- footer
+   ================================================== -->
+
+   <footer>
+     	<div class="row">
+
+     		<div class="col-six tab-full pull-right social">
+
+     			<ul class="footer-social">        
+            {% for list in social %}
+               <li><a href="{{ list.url }}"><i class="fa fa-{{ list.name }}"></i></a></li>
+            {% endfor %}
+			   </ul> 
+	      		
+	      </div>
+
+      	<div class="col-six tab-full">
+	      	<div class="copyright">
+		        	<span>© Copyright rajujha.me 2017</span> 
+		        	<span>Source available at <a href="www.github.com/rajujha373"><i class="fa fa-github"></i></a></span>	         	
+		         </div>		                  
+	      	</div>
+
+	      	<div id="go-top">
+		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+		      </div>
+
+      	</div> <!-- /row -->     	
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="{% static 'home/js/jquery-2.1.3.min.js' %}"></script>
+   <script src="{% static 'home/js/plugins.js' %}"></script>
+   <script src="{% static 'home/js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<section id="services" class="quote">
+
+		<div class="overlay"></div>
+
+<!-- 		<div class="row section-intro">
+<div class="col-twelve">
+  		  		
+  		  			<h5>My Favorite Quotations</h5>
+  		  		
+  		  		</div>  		
+   	</div> /section-intro -->
+
+   	<div class="row services-content">
+
+   		<div id="owl-slider" class="owl-carousel services-list">
+        {% for quote in quotes %}
+	      	<div class="service">	         
+
+	            <div class="service-content">
+
+		            <blockquote>
+                   <p>{{quote.text}}</p>
+                   <cite>{{quote.citiation}}</cite>
+                </blockquote>
+
+             	</div> 	      
+
+    			</div> <!-- /service -->
+          
+        {% endfor %}
+
+	      </div> <!-- /services-list -->
+   		
+   	</div> <!-- /services-content -->
+		
+	</section> <!-- /services -->

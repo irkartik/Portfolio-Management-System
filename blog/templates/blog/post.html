@@ -1,0 +1,85 @@
+	{% extends 'home/base.html' %}
+	
+	{% block title %}{{ post.post_title }}{% endblock %}
+
+	{% block extrastyles %}
+		<style>
+			.author{
+				font-size: 0.5em;
+			}
+			#intro{
+				    height: 50%;
+		    min-height: 500px;
+			}
+			#blog{
+				padding-top: 0;
+			}
+			footer{
+				padding-top: 3rem;
+			}
+		</style>
+	{% endblock %}
+
+	{% block content %}
+
+	<header>   	
+   	<div class="row">
+
+   		<div class="top-bar">
+   			<a class="menu-toggle" href="#"><span>Menu</span></a>	      
+
+		   	<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a href="{% url 'core:home' %}" title="">Home</a></li>
+						<li><a href="{% url 'blog:home' %}" title="">Blog</a></li>				
+					</ul>
+				</nav>    		
+   		</div> <!-- /top-bar --> 
+   		
+   	</div> <!-- /row --> 		
+   </header> <!-- /header -->
+
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">   
+
+   	<div class="intro-overlay"></div>	
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
+
+<!-- 	   			<h5>print('Hello, World')</h5> -->
+	   			<h1>{{ post.post_title }}</h1>
+
+	   			<p class="intro-position">
+	   				<span>Posted by {{post.created_by}} on {{post.created_on}}</span>
+	   			</p>
+
+	   			<!-- <a class="button stroke smoothscroll" href="#blog" title="">Read Posts</a> -->
+
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> <!-- /intro-content -->     	
+
+   </section> <!-- /intro -->
+
+	   <!-- posts section
+   ================================================== -->
+   <section id="blog">  
+
+   		<div class="row">
+				<div class="col-twelve" style="text-align: center">
+					<h1 class="title" style="padding-top: 3rem;">{{ post.post_title }}<p class="author">by Raju Jha</p></h1>
+					<p class = "metadata">{{post.created_on}} | 3 likes</p>
+					<p class="body">{{post.body | safe}}</p>
+
+					<a class="button" href="#"><i class="fa fa-thumbs-up"></i>Like</a>
+				</div>
+		</div>
+   </section>
+   
+
+  {% endblock %}

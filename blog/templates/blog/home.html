@@ -1,0 +1,99 @@
+	{% extends 'home/base.html' %}
+	
+	{% block title %}Blog{% endblock %}
+
+	{% block extrastyles %}
+		<style>
+			.author{
+				font-size: 0.5em;
+			}
+			footer{
+				padding-top: 3rem;
+			}
+			hr{
+				width: 73%;
+			}
+		</style>
+	{% endblock %}
+
+	{% block content %}
+
+	<header>   	
+   	<div class="row">
+
+   		<div class="top-bar">
+   			<a class="menu-toggle" href="#"><span>Menu</span></a>	      
+
+		   	<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a href="{% url 'core:home' %}" title="">Home</a></li>
+						<li><a class="smoothscroll"  href="#blog" title="">Posts</a></li>				
+					</ul>
+				</nav>    		
+   		</div> <!-- /top-bar --> 
+   		
+   	</div> <!-- /row --> 		
+   </header> <!-- /header -->
+
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">   
+
+   	<div class="intro-overlay"></div>	
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
+
+	   			<h5>print('Hello, World')</h5>
+	   			<h1>Hey! I'm Raju Jha</h1>
+
+	   			<p class="intro-position">
+	   				<span>This is my personal blogging platform</span>
+	   			</p>
+
+	   			<a class="button stroke smoothscroll" href="#blog" title="">Read Posts</a>
+
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> <!-- /intro-content -->     	
+
+   </section> <!-- /intro -->
+
+	   <!-- posts section
+   ================================================== -->
+   <section id="blog">  
+
+   	<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Posts</h5>
+   			
+   		</div>   		
+   	</div> <!-- /section-intro -->
+		{% for post in all_posts %}
+
+   		<div class="row">
+				<div class="col-twelve">
+					<h1 class="title" style="padding-top: 3rem;"><a href="{{ post.id }}">{{ post.post_title }}</a><p class="author">by {{ post.created_by }}</p></h1>
+					<p class = "metadata">{{ post.created_on }} | 3 likes</p>
+					<p class="body">{{ post.brief }}</p>
+				</div>
+		</div>
+		<hr>
+
+
+		{% endfor  %}
+
+   	<div class="row button-section">
+   		<div class="col-twelve">
+   			<a href="#" title="< Previous" class="button">< Previous</a>
+   			<a href="#" title="Next >" class="button button-primary">Next ></a>
+   		</div>   		
+   	</div>
+
+   </section>
+ 
+ 	{% endblock %}

@@ -1,0 +1,32 @@
+   <section id="intro">   
+
+   	<div class="intro-overlay"></div>	
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
+
+	   			<h5>print('Hello, World')</h5>
+	   			<h1>I'm Raju Jha</h1>
+
+	   			<p class="intro-position">
+               {% for skills in home_skills %}
+	   				<span>{{ skills.name }}</span>
+               {% endfor %}
+	   			</p>
+
+	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> <!-- /intro-content --> 
+
+   	<ul class="intro-social">        
+      {% for list in social %}
+         <li><a href="{{ list.url }}"><i class="fa fa-{{ list.name }}"></i></a></li>
+      {% endfor %}
+      </ul> <!-- /intro-social -->      	
+
+   </section> <!-- /intro -->

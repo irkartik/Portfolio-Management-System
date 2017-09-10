@@ -1,0 +1,36 @@
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Work Experience</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+   			{% for work in work %}
+					<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>{{ work.position }}</h3>
+	   					<p>{{work.start_date}} - {{work.end_date}}</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>{{work.organization}}</h4>
+	   					<p>{{work.description}}</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+	   		{% endfor %}
+
+   			</div> <!-- /timeline-wrap -->   			
+
+   		</div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /resume-timeline -->

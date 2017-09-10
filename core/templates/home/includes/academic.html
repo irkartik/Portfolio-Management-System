@@ -1,0 +1,36 @@
+<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Education</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+			{% for academic in academics %}
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>{{ academic.degree }}</h3>
+	   					<p>{{academic.start_date }} - {{academic.end_date}} </p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>{{academic.institution}}</h4>
+	   					<p>{{academic.description}}</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+	   		{% endfor %}
+
+   			</div> <!-- /timeline-wrap -->   			
+
+   		</div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /resume-timeline -->

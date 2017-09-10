@@ -1,0 +1,35 @@
+{% load static %}
+<section id="portfolio">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Projects and Creations</h5>
+   			<h1>Check Out Some of My Works.</h1>
+
+   			<p class="lead">All my works are all Open Sourced on <a href="https://www.github.com/rajujha">GitHub</a></p>
+
+   		</div>   		
+   	</div> <!-- /section-intro--> 
+	<div class="row">
+		<div id="projects-carousal" class="owl-carousel">
+		
+		{% for project in projects %}
+			<div class="project-list">
+				<div class="row">
+					<div class="col-five tab-full">
+						<img class="projectimg" src="{{project.image_url}}">
+					</div>
+					<div class="col-seven tab-full">
+						<h1><a href="{{project.url}}">{{project.name}} <a href="{{project.github_url}}"><i class="fa fa-github"></i></a></a></h1>
+						<p><strong>Technology Stack Used: </strong>{{project.tech}}</p>
+						<p><strong>Description: </strong>{{project.description}}</p>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+
+		</div>
+	</div>
+
+	</section> <!-- /portfolio --> 

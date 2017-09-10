@@ -1,0 +1,91 @@
+   {% load static %}
+   <section id="about">  
+   
+   	<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>About</h5>
+   			<h1>Hey Guys!</h1>
+
+   			<div class="intro-info">
+               {% for text in misctext %}
+      				<img src="{{text.profilepic_url}}" alt="Profile Picture">
+               {% endfor %}
+               {% for text in misctext %}
+      				<p class="lead">{{ text.about_text | safe }}</p>
+               {% endfor %}
+   			</div>   			
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+   	<div class="row about-content">
+
+   		<div class="col-four tab-full">
+
+   			<h3>Profile</h3>
+               {% for text in misctext %}
+         			<p>{{ text.profile_text }}</p>
+               {% endfor %}
+   			<ul class="info-list">
+            {% for list in profile %}
+   				<li>
+   					<strong>{{list.profile_topic}}</strong>
+   					<span>{{list.value}}</span>
+   				</li>
+            {% endfor %}
+
+   			</ul> <!-- /info-list -->
+
+   		</div>
+
+   		<div class="col-four tab-full">
+
+   			<h3>Skills</h3>
+   			{% for text in misctext %}
+                  <p>{{ text.skill_text }}</p>
+               {% endfor %}
+
+				<ul class="skill-bars">
+               {% for skill in skills %}
+   				   <li>
+   				   	<div class="progress percent{{ skill.proficiency }}"><span>{{skill.proficiency}}%</span></div>
+   				   	<strong>{{ skill.name }}</strong>
+   				   </li>
+               {% endfor %}
+      
+				</ul> <!-- /skill-bars -->		
+
+   		</div>
+
+   		<div class="col-four tab-full">
+
+   			<h3>Certifications</h3>
+      			{% for text in misctext %}
+                  <p>{{ text.certification_text }}</p>
+               {% endfor %}
+
+				<ul class="info-list">
+            {% for list in certification %}
+   				<li>
+   					<strong>{{list.name}}</strong>
+   					<span><a href="{{list.url}}">{{list.provider}}</a></span>
+   				</li>
+            {% endfor %}
+
+   			</ul> <!-- /info-list -->	
+
+   		</div>
+
+   	</div>
+
+   	<div class="row button-section">
+   		<div class="col-twelve">
+   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
+            {% for text in misctext %}
+      			<a href="{{ text.resume_url }}" title="Download CV" class="button button-primary">Download CV</a>
+   		   {% endfor %}
+         </div>   		
+   	</div>
+
+   </section> <!-- /process-->
