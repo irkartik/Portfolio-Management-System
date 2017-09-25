@@ -77,7 +77,9 @@ class WorkExperience(models.Model):
 	start_date = models.CharField(max_length=100)
 	end_date = models.CharField(max_length=100)
 	description = models.TextField()
+	certificate = models.CharField(max_length=10000, verbose_name="Certificate Link (google drive)")
 	order = models.PositiveIntegerField()
+
 
 	class Meta:
 		verbose_name = "Work Experience"
@@ -92,6 +94,7 @@ class Academic(models.Model):
 	start_date = models.CharField(max_length=100)
 	end_date = models.CharField(max_length=100)
 	description = models.TextField()
+	marksheet = models.CharField(max_length=1000)
 	order = models.PositiveIntegerField()
 
 	class Meta:

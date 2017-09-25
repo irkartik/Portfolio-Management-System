@@ -12,73 +12,55 @@
    		</div> 
    	</div> <!-- /section-intro -->
 
-   	<div class="row contact-form">
+   	     <div class="row contact-form">
 
-   		<div class="col-twelve">
+         <div class="col-twelve">
+
 
             <!-- form -->
             <form name="contactForm" id="contactForm" method="post" action="">
-      			<fieldset>
+               <fieldset>
 
                   <div class="form-field">
- 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
+                     <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
                   </div>
                   <div class="form-field">
-	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
-	               </div>
+                     <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
+                  </div>
                   <div class="form-field">
-	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
-	               </div>                       
+                     <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
+                  </div>                       
                   <div class="form-field">
-	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
-	               </div>                      
+                     <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
+                  </div>                      
                  <div class="form-field">
-                     <!-- <button class="submitform">Submit</button> -->
-                     <!-- <div id="submit-loader">
+                     <button class="submitform">Submit</button>
+                     <div id="submit-loader">
                         <div class="text-loader">Sending...</div>                             
                         <div class="s-loader">
                            <div class="bounce1"></div>
                            <div class="bounce2"></div>
                            <div class="bounce3"></div>
                         </div>
-                     </div> -->
-                     
-                           <a href="#modal-01">                                   
-                              <button class="submitform">Submit</button>                
-                           </a>
-
-                           <div id="modal-01" class="popup-modal slider mfp-hide">         
-                                 <div class="description-box">
-                                    <h4>Oops!</h4>           
-                                    <p>This section of webpage is not yet active. :(</p>
-                                    <p>But you can contact me via Email! :)</p>                      
-                                 </div>
-
-                                 <div class="link-box">
-                                    <a href="http://www.behance.net">Email</a>
-                                    <a href="#" class="popup-modal-dismiss">Close</a>
-                                 </div>            
-
-                              </div> <!-- /modal-01 -->
-
-
-                     
+                     </div>
                   </div>
 
-      			</fieldset>
-      		</form> <!-- Form End -->
+               </fieldset>
+            </form> <!-- Form End -->
 
             <!-- contact-warning -->
-            <div id="message-warning">           	
+            <div id="message-warning">             
             </div>            
             <!-- contact-success -->
-      		<div id="message-success">
+            <div id="message-success">
                <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-      		</div>
+            </div>
 
          </div> <!-- /col-twelve -->
-   		
-   	</div> <!-- /contact-form -->
+         
+      </div> <!-- /contact-form -->
+
+
       {% for contact in contact %}
    	<div class="row contact-info">
 
