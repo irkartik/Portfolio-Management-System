@@ -19,11 +19,11 @@ Do star the repo if you think it worth it.
 <code>cd portfolio </code> <br>
 3. Create a virtual environment and activate it. <br>
 <code>$ virtualenv venv</code> <br>
-<code>$ venv\Scripts\activate</code> <br>
+<code>$ venv\Scripts\activate</code> on Windows or <code>$ source venv/bin/activate</code> on Posix system <br>
 4. Install the requirements for the project <br>
 <code>$ pip install -r requirements.txt</code>  <br>
 5. Now start the localhost server<br>
-<code>$ python manage.py runserver</code> <br>'
+<code>$ python manage.py runserver</code> <br>
 
 # Screenshots
 
