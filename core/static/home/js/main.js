@@ -290,6 +290,29 @@
   		}
 
 	});
+	
+
+ 	/*----------------------------------------------------- */
+  	/* Hide Hamburger icon
+   ------------------------------------------------------- */ 
+   	var previousScroll = 0;
+	
+	$(window).scroll(function(event){
+    var scroll = $(this).scrollTop();
+    console.log("hello");
+    if (scroll > previousScroll){
+       $(".top-bar").hide(200);
+    } 
+    
+    else {
+   		$(".top-bar").show(200);
+    }
+   
+    previousScroll = scroll;
+	
+   });
+
+
 
 
  	/*----------------------------------------------------- */
