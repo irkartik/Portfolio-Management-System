@@ -2,6 +2,8 @@
 
 Managing the portfolio site was always a pain if just frontend was used. Even for minute changes to be made, whole website code was to be formatted. I have used django for CMS (Content Management Service) to ease the pain of editing whole code for any changes.
 
+I am basically working on making this project an opensource Portfolio Management System and will soon be releasing a multi functional and generic PMS (Portfolio Management System). 
+
 <i>Any contributions from you guys are welcome. Just fork this repository, make changes in the code and create a pull request, I will merge the changes if it seems interesting. :)</i>
 
 Do star the repo if you think it worth it. 
