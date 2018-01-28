@@ -27,8 +27,8 @@ class MiscText(models.Model):
 	skill_text = models.TextField()
 	certification_text = models.TextField()
 	contact_text = models.TextField()
-	resume_url = models.CharField(max_length=1000)
-	profilepic_url = models.CharField(max_length=1000)
+	resume = models.FileField(max_length=1000)
+	profilepic = models.FileField(max_length=1000)
 
 
 class Social(models.Model):
@@ -77,7 +77,7 @@ class WorkExperience(models.Model):
 	start_date = models.CharField(max_length=100)
 	end_date = models.CharField(max_length=100)
 	description = models.TextField()
-	certificate = models.CharField(max_length=10000, verbose_name="Certificate Link (google drive)")
+	certificate = models.FileField(max_length=10000, verbose_name="Certificate Upload", null = True, blank = True)
 	order = models.PositiveIntegerField()
 
 
@@ -94,7 +94,7 @@ class Academic(models.Model):
 	start_date = models.CharField(max_length=100)
 	end_date = models.CharField(max_length=100)
 	description = models.TextField()
-	marksheet = models.CharField(max_length=1000)
+	certificate = models.FileField(max_length=1000, null=True, blank=True)
 	order = models.PositiveIntegerField()
 
 	class Meta:
@@ -116,7 +116,7 @@ class Project(models.Model):
 	url = models.CharField(max_length=1000)
 	tech = models.CharField(max_length=10000, verbose_name="Technology Stack Used")
 	description = models.TextField()
-	image_url = models.CharField(max_length=10000)
+	image = models.FileField(max_length=10000)
 
 	def __str__(self):
 		return self.name

@@ -13,21 +13,24 @@
    	</div> <!-- /section-intro--> 
 	<div class="row">
 		<div id="projects-carousal" class="owl-carousel">
-		
-		{% for project in projects %}
-			<div class="project-list">
-				<div class="row">
-					<div class="col-five tab-full">
-						<img class="projectimg" src="{{project.image_url}}">
-					</div>
-					<div class="col-seven tab-full">
-						<h1><a href="{{project.url}}">{{project.name}} <a href="{{project.github_url}}"><i class="fa fa-github"></i></a></h1>
-						<p><strong>Technology Stack Used: </strong>{{project.tech}}</p>
-						<p><strong>Description: </strong>{{project.description}}</p>
+		{% if projects %}
+			{% for project in projects %}
+				<div class="project-list">
+					<div class="row">
+						<div class="col-five tab-full">
+							<img class="projectimg" src="{{project.image.url}}">
+						</div>
+						<div class="col-seven tab-full">
+							<h1><a href="{{project.url}}">{{project.name}} <a href="{{project.github_url}}"><i class="fa fa-github"></i></a></h1>
+							<p><strong>Technology Stack Used: </strong>{{project.tech}}</p>
+							<p style="text-align: justify;"><strong>Description: </strong>{{project.description}}</p>
+						</div>
 					</div>
 				</div>
-			</div>
-		{% endfor %}
+			{% endfor %}
+		{% else %}
+			<h3 style="padding-bottom: 20px;  text-align:center;">Sorry, No Projects available. Check out soon for more.</h3>
+		{% endif %}
 
 		</div>
 	</div>

@@ -9,10 +9,10 @@
 
    			<div class="intro-info">
                {% for text in misctext %}
-      				<img src="{{text.profilepic_url}}" alt="Profile Picture">
+      				<img src="{{text.profilepic.url}}" alt="Profile Picture">
                {% endfor %}
                {% for text in misctext %}
-      				<p class="lead">{{ text.about_text | safe }}</p>
+      				<p class="lead" style="text-align: justify;">{{ text.about_text | safe }}</p>
                {% endfor %}
    			</div>   			
 
@@ -81,9 +81,9 @@
 
    	<div class="row button-section">
    		<div class="col-twelve">
-   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
+   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Contact Me</a>
             {% for text in misctext %}
-      			<a href="{{ text.resume_url }}" title="Download CV" class="button button-primary">Download CV</a>
+      			<a href="{{ text.resume.url }}" target="_new" title="Resume" class="button button-primary">Resume</a>
    		   {% endfor %}
          </div>   		
    	</div>

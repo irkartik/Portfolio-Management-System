@@ -1,0 +1,48 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Thank You | Raju Jha {% endblock %}
+{% block content %}
+	<style type="text/css">
+		@media screen and (min-width: 1000px) {
+			#thankyoumessage{
+				color: white;
+				text-align: center;
+				vertical-align: middle;
+				padding-top: 20%;
+				padding-bottom: 20%;
+		}
+		}
+		@media screen and (max-width: 1000px){
+			#thankyoumessage{		
+			    color: white;
+			    margin-left: 20px;
+			    padding-top: 60%;
+			    padding-bottom: 50%;
+		}
+		}
+	</style>
+	<div class="incapsulate">
+	<header>   	
+   	<div class="row">
+
+   		<div class="top-bar">
+   			<a class="menu-toggle" href="#"><span>Menu</span></a>	      
+
+		   	<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li><a href="{% url 'home-core' %}" title="">Home</a></li>
+						<li><a href="{% url 'home-blog' %}" title="">Blog</a></li>			
+					</ul>
+				</nav>    		
+   		</div> <!-- /top-bar --> 
+   		
+   	</div> <!-- /row --> 	
+   </header> <!-- /header -->
+  	<div class="thankyouheading">
+		<h1 id="thankyoumessage">Thank you for your response, I will get back to you soon</h1>
+	</div>	
+		<!-- footer -->
+			{% include 'home/includes/footer.html' %}
+</div>
+   
+{% endblock %}

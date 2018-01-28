@@ -1,0 +1,24 @@
+{% extends "admin/base.html" %}
+
+{% block extrastyle %}
+    <style>
+/*       #header{
+  background-color: #1b7a58;
+} */
+      body {
+        background-color: aliceblue;
+      }
+      div#content-related {
+        box-shadow: 5px 5px 5px #888888;
+        border-radius: 5px;
+      }
+    </style>
+{% endblock %}
+
+{% block title %}{{ title }} | {{ brand }} Admin{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{brand}} administration</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

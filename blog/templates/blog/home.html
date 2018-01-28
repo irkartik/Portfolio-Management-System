@@ -11,7 +11,11 @@
 				padding-top: 3rem;
 			}
 			hr{
-				width: 73%;
+				width: 60%;
+			}
+			#blog{
+				padding-bottom: 5rem;
+				padding-top: 10rem;
 			}
 		</style>
 	{% endblock %}
@@ -26,7 +30,7 @@
 
 		   	<nav id="main-nav-wrap">
 					<ul class="main-navigation">
-						<li class="current"><a href="{% url 'core:home' %}" title="">Home</a></li>
+						<li class="current"><a href="{% url 'home-core' %}" title="">Home</a></li>
 						<li><a class="smoothscroll"  href="#blog" title="">Posts</a></li>				
 					</ul>
 				</nav>    		
@@ -37,7 +41,7 @@
 
 	<!-- intro section
    ================================================== -->
-   <section id="intro">   
+<!--    <section id="intro">   
 
    	<div class="intro-overlay"></div>	
 
@@ -58,9 +62,11 @@
 	   		</div>  
    			
    		</div>   		 		
-   	</div> <!-- /intro-content -->     	
+   	</div>  --><!-- /intro-content -->    	
 
-   </section> <!-- /intro -->
+  <!-- </section>  -->
+
+   <!-- /intro -->
 
 	   <!-- posts section
    ================================================== -->
@@ -73,27 +79,30 @@
    			
    		</div>   		
    	</div> <!-- /section-intro -->
-		{% for post in all_posts %}
-
-   		<div class="row">
-				<div class="col-twelve">
-					<h1 class="title" style="padding-top: 3rem;"><a href="{{ post.id }}">{{ post.post_title }}</a><p class="author">by {{ post.created_by }}</p></h1>
-					<p class = "metadata">{{ post.created_on }} | 3 likes</p>
-					<p class="body">{{ post.brief }}</p>
+   		{% if all_posts %}
+			{% for post in all_posts %}
+		   		<div class="row">
+						<div class="col-twelve">
+							<h1 class="title" style="padding-top: 3rem;"><a href="{{ post.id }}">{{ post.post_title }}</a><p class="author">by {{ post.created_by.get_full_name }}</p></h1>
+							<p class = "metadata">{{ post.created_on }} <!-- | 3 likes --></p>
+							<p class="body">{{ post.brief }}</p>
+							<a href="{{ post.id }}">Read More</a>
+						</div>
 				</div>
-		</div>
-		<hr>
+				<hr width="50%">
+			{% endfor  %}
+		{% else %}
+			<h1 style="padding-bottom: 20px;  text-align:center;">Sorry, No Posts available. Check out soon for more posts</h1>
+		{% endif %}
 
-
-		{% endfor  %}
-
-   	<div class="row button-section">
+<!--    	<div class="row button-section">
    		<div class="col-twelve">
    			<a href="#" title="< Previous" class="button">< Previous</a>
    			<a href="#" title="Next >" class="button button-primary">Next ></a>
    		</div>   		
-   	</div>
-
+   	</div> -->
    </section>
+
+     	{% include 'home/includes/footer.html' %}
  
  	{% endblock %}

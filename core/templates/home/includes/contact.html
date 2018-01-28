@@ -18,7 +18,8 @@
 
 
             <!-- form -->
-            <form name="contactForm" id="contactForm" method="post" action="">
+            <form class="form" name="contactForm" method="post" action="{% url 'sendEmail' %}">
+            	{% csrf_token %}
                <fieldset>
 
                   <div class="form-field">
@@ -49,8 +50,9 @@
             </form> <!-- Form End -->
 
             <!-- contact-warning -->
-            <div id="message-warning">             
-            </div>            
+              {% if error_message %}
+                     <p><strong>{{ error_message }}</strong></p>
+              {% endif %}            
             <!-- contact-success -->
             <div id="message-success">
                <i class="fa fa-check"></i>Your message was sent, thank you!<br>

@@ -22,7 +22,7 @@
 	   				</div>
 
 	   				<div class="timeline-content">
-	   					<h4>{{academic.institution}} <a href="{{work.certificate}}" title="View Marksheet"><i class="fa fa-file-text-o" aria-hidden="true"></i></a></h4>
+	   					<h4>{{academic.institution}} {% if academic.certificate %}<a href="{{academic.certificate.url}}" target="_new" title="View Certificate"><i class="fa fa-file-text-o" aria-hidden="true"></i></a>{% endif %}</h4>
 	   					<p>{{academic.description}}</p>
 	   				</div>
 

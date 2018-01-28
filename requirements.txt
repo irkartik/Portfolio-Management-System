@@ -1,2 +1,9 @@
-Django==1.11.5
+Django==1.8
 pytz==2017.2
+django-ckeditor==5.4.0
+django-js-asset==1.0.0
+mysqlclient==1.3.12
+boto==2.48.0
+boto3==1.5.22
+botocore==1.8.36
+django-storages==1.6.5

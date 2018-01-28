@@ -1131,7 +1131,7 @@ header .logo a {
 	color: transparent;
 	width: 92px;
 	height: 15px;
-	background: url("../images/logo.png") no-repeat center;
+	/*background: url("../images/logo.png") no-repeat center;*/
 	background-size: 92px 15px;
 }
 
@@ -1515,7 +1515,7 @@ header .logo a {
 #about {
 	padding-top: 12rem;
 	padding-bottom: 15rem;
-	background-image: url(https://static.pexels.com/photos/316466/pexels-photo-316466.jpeg);
+	background: #ffffff url(https://static.pexels.com/photos/316466/pexels-photo-316466.jpeg);
     background-position: center;
     background-size: cover;
 }

@@ -27,14 +27,14 @@ Do star the repo if you think it worth it.
 
 # Screenshots
 
-<img src="/screenshots/home.png">
+<img src="/screenshots/homepage.png">
 &nbsp;
-<img src="/screenshots/blog.png">
+<img src="/screenshots/bloghome.png">
 &nbsp;
-<img src="/screenshots/post.png">
+<img src="/screenshots/viewpost.png">
 &nbsp;
 <img src="/screenshots/login.png">
 &nbsp;
-<img src="/screenshots/dashboard.png">
+<img src="/screenshots/adminportal.png">
 &nbsp;
 <img src="/screenshots/addpost.png">
