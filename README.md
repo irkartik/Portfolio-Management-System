@@ -10,7 +10,7 @@ Do star the repo if you think it worth it.
 
 # Requirements (that shall be installed in your system)
 1. Git 
-2. virtualenv
+2. Virtualenv
 3. Python
 
 # How to run in your local machine?
