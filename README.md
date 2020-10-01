@@ -8,7 +8,7 @@ I am basically working on making this project an opensource Portfolio Management
 
 Do star the repo if you think it worth it. 
 
-# Requirements (that shall be installed in your system)
+# System Requirements 
 1. Git 
 2. virtualenv
 3. Python
